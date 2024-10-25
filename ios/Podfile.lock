@@ -1509,6 +1509,17 @@ PODS:
     - React-logger (= 0.76.0)
     - React-perflogger (= 0.76.0)
     - React-utils (= 0.76.0)
+  - RollbarCommon (3.3.2)
+  - RollbarCrash (3.3.2)
+  - RollbarNotifier (3.3.2):
+    - RollbarCommon (~> 3.3.2)
+    - RollbarCrash (~> 3.3.2)
+    - RollbarReport (~> 3.3.2)
+  - RollbarReactNative (1.0.0-beta.4):
+    - React-Core
+    - RollbarNotifier (= 3.3.2)
+  - RollbarReport (3.3.2):
+    - RollbarCrash (~> 3.3.2)
   - SocketRocket (0.7.1)
   - Yoga (0.0.0)
 
@@ -1577,10 +1588,17 @@ DEPENDENCIES:
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCodegen (from `build/generated/ios`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RollbarCrash
+  - RollbarReactNative (from `../node_modules/rollbar-react-native`)
+  - RollbarReport
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   trunk:
+    - RollbarCommon
+    - RollbarCrash
+    - RollbarNotifier
+    - RollbarReport
     - SocketRocket
 
 EXTERNAL SOURCES:
@@ -1709,6 +1727,8 @@ EXTERNAL SOURCES:
     :path: build/generated/ios
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RollbarReactNative:
+    :path: "../node_modules/rollbar-react-native"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -1775,9 +1795,14 @@ SPEC CHECKSUMS:
   React-utils: d9624101245ebaab39c9f1bd786132da0b4f27ff
   ReactCodegen: dbfef1fef26f42c900bb1884fa149d49d501d64d
   ReactCommon: 429ca28cd813c31359c73ffac6dc24f93347d522
+  RollbarCommon: ebcc821a01d12aa29b66b204da041b95e99dfcce
+  RollbarCrash: 1069c64976ae36b42c45187c977115d07a6f6667
+  RollbarNotifier: e4c4d5c945489af69e063bf6b1aba4990136a7f6
+  RollbarReactNative: 558c46bd929f39bb137d43bddf3502b3566ab525
+  RollbarReport: 6008c84d712bffb3cea026d04c284ce568ec7c27
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: f8ec45ce98bba1bc93dd28f2ee37215180e6d2b6
 
-PODFILE CHECKSUM: e8bfd2606e4e796253a1d0494fa403a05adba876
+PODFILE CHECKSUM: 8b805e7063e222e192667c40e9744394ac6ac316
 
 COCOAPODS: 1.15.2

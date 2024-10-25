@@ -17,6 +17,13 @@ end
 target 'hb' do
   config = use_native_modules!
 
+  pod 'RollbarReactNative', path: '../node_modules/rollbar-react-native'
+
+  # Rollbar dependencies
+  pod 'RollbarReport'
+  pod 'RollbarCrash', :modular_headers => true
+
+
   use_react_native!(
     :path => config[:reactNativePath],
     # An absolute path to your application root.
