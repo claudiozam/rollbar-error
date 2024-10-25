@@ -10,8 +10,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "@rollbar/react": "^0.12.0-beta",
     "react": "18.3.1",
-    "react-native": "0.76.0"
+    "react-native": "0.76.0",
+    "rollbar": "^2.26.4",
+    "rollbar-react-native": "^1.0.0-beta.4"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
